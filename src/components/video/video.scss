@@ -7,7 +7,6 @@
     align-items: center;
     gap: 30px;
     padding-top: 100px;
-    padding-bottom: 100px;
 
     &-title {
       @include font(32px, 600, $black-out);

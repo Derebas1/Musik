@@ -1,0 +1,103 @@
+.genre {
+  margin-top: 240px;
+
+  @include mobile(1200px) {
+    margin-top: 180px;
+  }
+
+  @include mobile(870px) {
+    margin-top: 130px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: 140px;
+    padding-bottom: 70px;
+
+    @include mobile(1200px) {
+      gap: 100px;
+    }
+
+    @include mobile(870px) {
+      flex-direction: column-reverse;
+    }
+
+    &-picture {
+      position: relative;
+      z-index: -1;
+
+      img:nth-child(1) {
+        border-radius: 24px;
+      }
+
+      img:nth-child(2) {
+        position: absolute;
+        top: 70px;
+        left: 70px;
+        border-radius: 24px;
+
+        @include mobile(550px) {
+          top: 50px;
+          left: 50px;
+        }
+      }
+
+      & img {
+        @include mobile(870px) {
+          width: 400px;
+        }
+
+        @include mobile(550px) {
+          width: 250px;
+        }
+      }
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      margin-top: 60px;
+
+      @include mobile(1200px) {
+        margin-top: 80px;
+        gap: 20px;
+      }
+
+      @include mobile(870px) {
+        align-items: center;
+        text-align: center;
+        margin-top: 0px;
+      }
+
+      &-title {
+        @include font(34px, 700, $black-out);
+        line-height: 44px;
+        text-transform: capitalize;
+      }
+
+      &-text {
+        font-family: map-get($font-change, "raleway");
+        @include font(16px, 400, $black-out);
+        line-height: 24px;
+        opacity: 0.7;
+      }
+
+      &-button {
+        max-width: 193px;
+        @include button("primary");
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 48px;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

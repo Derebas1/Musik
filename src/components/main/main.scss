@@ -1,0 +1,161 @@
+.main {
+  width: 100%;
+  height: 964px;
+  background-image: url(../../assets/images/main-images/Img.jpg);
+  background-position: center;
+
+  &__content {
+    padding-top: 235px;
+
+    @include mobile(560px) {
+      padding-top: 160px;
+    }
+
+    @include mobile(480px) {
+      padding-top: 130px;
+    }
+
+    &-info {
+      max-width: 970px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      text-align: center;
+
+      @include mobile(480px) {
+        gap: 20px;
+      }
+
+      &-title {
+        @include font(72px, 700);
+        text-transform: capitalize;
+        line-height: 88px;
+
+        @include mobile(560px) {
+          font-size: 60px;
+        }
+
+        @include mobile(480px) {
+          font-size: 50px;
+          line-height: 68px;
+        }
+
+        & span {
+          color: $pink-dream;
+        }
+      }
+
+      &-text {
+        font-family: map-get($font-change, "raleway");
+        @include font;
+        line-height: 38px;
+      }
+
+      &-video {
+        display: flex;
+        justify-content: center;
+        gap: 45px;
+
+        @include mobile(480px) {
+          flex-direction: column;
+          align-items: center;
+          gap: 30px;
+        }
+
+        &-button {
+          @include button("warning");
+          text-transform: capitalize;
+          font-family: $montserrat;
+          letter-spacing: 1px;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        &-play {
+          display: flex;
+          align-items: center;
+          gap: 25px;
+
+          &-icons {
+            &:hover {
+              cursor: pointer;
+            }
+          }
+
+          &-link {
+            cursor: pointer;
+
+            @include font(20px, 800);
+            line-height: 28px;
+            text-transform: capitalize;
+            letter-spacing: 0.5px;
+          }
+        }
+      }
+    }
+  }
+
+  &__times {
+    @include font(144px, 700);
+    font-family: $montserrat;
+    line-height: 176px;
+    max-width: 1447px;
+    margin: 122px auto 0px;
+    text-align: center;
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.5);
+    letter-spacing: 18px;
+
+    @include mobile(1430px) {
+      letter-spacing: 2px;
+    }
+
+    @include mobile(1200px) {
+      font-size: 110px;
+      margin-top: 90px;
+    }
+
+    @include mobile(920px) {
+      font-size: 90px;
+      margin-top: 70px;
+      line-height: 120px;
+    }
+
+    @include mobile(770px) {
+      display: none;
+    }
+
+    &-picture {
+      display: none;
+
+      @include mobile(770px) {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+
+        & img {
+          width: 100px;
+          height: 100px;
+          margin: 30px 0px;
+
+          animation-name: animation-time;
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+          animation-delay: 1s;
+        }
+
+        @keyframes animation-time {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }
+      }
+    }
+  }
+}

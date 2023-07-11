@@ -1,0 +1,73 @@
+.footer {
+  background-color: $black-out;
+
+  @include mobile(1550px) {
+    margin-top: 50px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 10px 35px;
+
+    @include mobile(1000px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 55px;
+    }
+
+    &-menu {
+      display: flex;
+      flex-direction: column;
+      gap: 55px;
+
+      @include mobile(1000px) {
+        align-items: center;
+      }
+
+      &-nav {
+        display: flex;
+        gap: 30px;
+
+        @include mobile(461px) {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        &-link {
+          @include font(14px, 600);
+          line-height: 20px;
+          text-transform: uppercase;
+
+          & a {
+            color: $white;
+          }
+        }
+      }
+    }
+
+    &-media {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-end;
+      align-items: center;
+      gap: 126px;
+
+      @include mobile(459px) {
+        gap: 35px;
+      }
+
+      &-menu {
+        display: flex;
+        gap: 30px;
+      }
+
+      & span {
+        font-family: map-get($font-change, "raleway");
+        @include font(12px);
+        line-height: 18px;
+        opacity: 0.3;
+      }
+    }
+  }
+}

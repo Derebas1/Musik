@@ -1,0 +1,21 @@
+@mixin mobile($mw) {
+  @media (max-width: $mw) {
+    @content;
+  }
+}
+
+@mixin font($fz: 24px, $font-weights: 400, $color: $white) {
+  font-size: $fz;
+  font-weight: $font-weights;
+  color: $color;
+}
+
+@mixin button($type: "default") {
+  background-color: map-get($color-change, $type);
+  color: #fff;
+  padding: 18px 34px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}

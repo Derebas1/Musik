@@ -1,0 +1,36 @@
+$montserrat: "Montserrat", sans-serif;
+$raleway: "Raleway", sans-serif;
+
+$font-change: (
+  "montserrat": $montserrat,
+  "raleway": $raleway,
+);
+
+$font-weights: (
+  "regular": 400,
+  "semibold": 600,
+  "bold": 700,
+);
+
+$fz: 24px;
+
+$white: #fff;
+$black-out: #222;
+$pink-dream: #ffa3a3;
+$red-mana: #fc5252;
+$blue-copper-ore: #381ddb;
+$christmas-silver: #e0e0e0;
+$dulce-de-leche: #db841d;
+$roycroft-adobe: #aa6550;
+$jealous-jellyfish: #c00096;
+$lusty-gallant: #ffcdcd;
+$blushing-cinnamon: #ffbe9d;
+$chromis-damsel-blue: #84c4ff;
+$color-namer: #ccc;
+
+$color-change: (
+  "default": $white,
+  "primary": $blue-copper-ore,
+  "warning": $red-mana,
+  "basic": $black-out,
+);

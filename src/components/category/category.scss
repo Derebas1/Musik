@@ -1,0 +1,184 @@
+@import "../../assets/styles/variables.scss";
+@import "category-variables.scss";
+
+$category-map: (
+  1 $dulce-de-leche $white $pop,
+  2 $red-mana $white $folk,
+  3 $color-namer $white $instrumental,
+  4 $jealous-jellyfish $white $rock,
+  5 $chromis-damsel-blue $white $jazz,
+  6 $dulce-de-leche $white $pop,
+  7 $red-mana $white $folk,
+  8 $color-namer $white $instrumental,
+  9 $jealous-jellyfish $white $rock,
+  10 $chromis-damsel-blue $white $jazz
+);
+
+.category__slider-slide {
+  @each $index, $color-icon, $change-color-icon, $bg-color in $category-map {
+    &:nth-child(#{$index}) {
+      background-color: $bg-color;
+
+      &:hover {
+        & svg {
+          fill: $change-color-icon;
+        }
+      }
+
+      .category__slider-slide {
+        &-info {
+          &-icon {
+            fill: $color-icon;
+          }
+        }
+      }
+    }
+  }
+}
+
+.category {
+  font-family: map-get($font-change, "montserrat");
+  padding-top: 240px;
+  overflow: hidden;
+
+  &__title {
+    @include font(34px, 700, $black-out);
+
+    @include mobile(1200px) {
+      text-align: center;
+    }
+
+    & span {
+      color: $blue-copper-ore;
+      margin-left: 365px;
+
+      @include mobile(1200px) {
+        margin-left: 0px;
+      }
+    }
+  }
+
+  &__slider {
+    margin-top: 60px;
+
+    @include mobile(1540px) {
+    }
+
+    &-slide {
+      height: 326px;
+      border-radius: 24px;
+
+      &:hover {
+        background-color: $blue-copper-ore;
+
+        & span {
+          color: $white;
+        }
+
+        // & svg {
+        //   fill: $white;
+        // }
+      }
+
+      &-info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 66px 90px 36px 60px;
+
+        @include mobile(1620px) {
+          padding: 70px 65px 0px 30px;
+        }
+
+        @include mobile(1420px) {
+          padding: 70px 35px 0px 30px;
+        }
+
+        @include mobile(1200px) {
+          padding: 70px 35px 0px 15px;
+        }
+
+        &-icon {
+          width: 40px;
+          height: 40px;
+        }
+
+        &-title {
+          margin-top: 10px;
+          font-size: 24px;
+          font-weight: 800;
+          color: $black-out;
+          line-height: 38px;
+        }
+
+        &-text {
+          font-family: map-get($font-change, "raleway");
+          @include font(16px, 400, $black-out);
+          opacity: 0.7;
+          line-height: 24px;
+
+          @include mobile(470px) {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  // &__explore {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   gap: 30px;
+  //   margin-top: 60px;
+
+  //   @include mobile(1620px) {
+  //     gap: 20px;
+  //   }
+
+  //   @include mobile(1420px) {
+  //     flex-wrap: wrap;
+  //     gap: 30px;
+  //     justify-content: center;
+  //   }
+
+  //   &-item {
+  //     max-width: 370px;
+  //     height: 326px;
+  //     border-radius: 24px;
+
+  //     &:nth-child(1) {
+  //       background-color: rgba(219, 132, 29, 0.1);
+  //     }
+  //     &:nth-child(2) {
+  //       background-color: rgba(252, 82, 82, 0.1);
+  //     }
+  //     &:nth-child(3) {
+  //       background-color: rgba(34, 34, 34, 0.1);
+  //     }
+  //     &:nth-child(4) {
+  //       background-color: rgba(192, 0, 150, 0.1);
+  //     }
+  //     &:nth-child(5) {
+  //       background-color: rgba(132, 196, 255, 0.1);
+  //     }
+
+  //     &:hover {
+  //       cursor: pointer;
+  //       background-color: $blue-copper-ore;
+
+  //       & span {
+  //         color: $white;
+  //       }
+  //     }
+
+  //     @include mobile(1620px) {
+  //       max-width: 320px;
+  //     }
+
+  //     @include mobile(1420px) {
+  //       max-width: 420px;
+  //     }
+
+  //   }
+  // }
+}

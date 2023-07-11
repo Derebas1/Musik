@@ -1,0 +1,211 @@
+.contact {
+  margin-top: 240px;
+  display: flex;
+
+  @include mobile(1550px) {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__us {
+    position: relative;
+    min-width: 845px;
+    height: 662px;
+    background-color: $blue-copper-ore;
+    color: $white;
+
+    @include mobile(845px) {
+      max-width: 845px;
+      min-width: 0px;
+    }
+
+    &-title {
+      font-family: $montserrat;
+      @include font(32px, 700);
+      line-height: 44px;
+      padding-top: 120px;
+      margin-left: 80px;
+
+      @include mobile(630px) {
+        padding-top: 50px;
+        margin-left: 40px;
+      }
+    }
+
+    &-text {
+      font-family: $raleway;
+      @include font;
+      line-height: 38px;
+      opacity: 0.7;
+      margin-left: 80px;
+
+      @include mobile(630px) {
+        margin-left: 40px;
+      }
+    }
+
+    &-details {
+      margin: 80px 0px 0px 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      @include mobile(630px) {
+        margin-left: 40px;
+      }
+
+      &-phone {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        & span {
+          font-family: $montserrat;
+          @include font(16, 700);
+        }
+      }
+
+      &-email {
+        display: flex;
+        align-items: center;
+
+        gap: 8px;
+
+        & span {
+          font-family: $montserrat;
+          @include font(16, 700);
+        }
+      }
+
+      &-map {
+        display: flex;
+        align-items: center;
+
+        gap: 8px;
+
+        & span {
+          font-family: $montserrat;
+          @include font(16, 700);
+        }
+      }
+    }
+
+    &-picture {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  &__form {
+    width: 100%;
+    background: rgba(34, 34, 34, 0.03);
+
+    @include mobile(1550px) {
+      display: flex;
+      justify-content: center;
+    }
+
+    @include mobile(845px) {
+      max-width: 845px;
+    }
+
+    @include mobile(630px) {
+      padding: 0px 10px;
+    }
+
+    &-info {
+      width: 570px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      margin-top: 130px;
+      margin-left: 130px;
+
+      @include mobile(1550px) {
+        margin-left: 0px;
+      }
+
+      &-title {
+        font-family: $montserrat;
+        @include font($fz, 800, $black-out);
+        line-height: 38px;
+      }
+
+      &-details {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        input {
+          background: inherit;
+          font-family: $raleway;
+          font-size: 16px;
+          line-height: 24px;
+          padding: 8px 0px;
+          width: 100%;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        &-name {
+          border-bottom: 1px solid $christmas-silver;
+
+          &-title {
+            font-family: $raleway;
+            @include font(12px, 700, $black-out);
+            opacity: 0.7;
+            line-height: 18px;
+          }
+        }
+
+        &-email {
+          border-bottom: 1px solid $christmas-silver;
+
+          &-title {
+            font-family: $raleway;
+            @include font(12px, 700, $black-out);
+            opacity: 0.7;
+            line-height: 18px;
+          }
+        }
+
+        &-message {
+          border-bottom: 1px solid $christmas-silver;
+
+          &-title {
+            font-family: $raleway;
+            @include font(12px, 700, $black-out);
+            opacity: 0.7;
+            line-height: 18px;
+          }
+
+          textarea {
+            background: inherit;
+            font-family: $raleway;
+            font-size: 16px;
+            line-height: 24px;
+            padding: 8px 0px;
+            width: 100%;
+
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+      }
+
+      &-button {
+        @include button("primary");
+        font-family: $montserrat;
+        letter-spacing: 1px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

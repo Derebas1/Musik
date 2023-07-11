@@ -1,0 +1,66 @@
+.video {
+  margin-top: 240px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    &-title {
+      @include font(32px, 600, $black-out);
+      text-transform: capitalize;
+    }
+
+    &-text {
+      @include font(24px, 400, $black-out);
+    }
+
+    &-video {
+      padding-top: 50px;
+      display: flex;
+      gap: 50px;
+
+      & iframe {
+        width: 800px;
+        height: 300px;
+      }
+
+      & {
+        &--close {
+          display: none;
+        }
+      }
+
+      &-close {
+        width: 20px;
+        height: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        & span {
+          height: 2px;
+          background-color: $black-out;
+          width: 100%;
+
+          &:first-child {
+            transform: rotate(41deg);
+            transform-origin: top left;
+          }
+
+          &:last-child {
+            transform: rotate(-41deg);
+            transform-origin: bottom left;
+          }
+        }
+      }
+    }
+  }
+}

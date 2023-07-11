@@ -1,0 +1,7 @@
+.hover {
+  &:hover {
+    & span {
+      color: $red-mana;
+    }
+  }
+}

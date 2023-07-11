@@ -1,0 +1,13 @@
+@import "./variables.scss";
+
+.section {
+  max-width: 100%;
+
+  &__content {
+    font-family: map-get($font-change, "montserrat");
+    max-width: 1190px;
+    margin: 0 auto;
+    padding: 0 10px;
+    overflow: hidden;
+  }
+}

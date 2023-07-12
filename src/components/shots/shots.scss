@@ -12,6 +12,10 @@
     position: absolute;
     left: 498px;
 
+    @include mobile(1370px) {
+      left: 458px;
+    }
+
     @include mobile(990px) {
       display: none;
     }
@@ -23,14 +27,23 @@
     font-family: $montserrat;
     @include font(34px, 700, $black-out);
     line-height: 44px;
+
+    @include mobile(1370px) {
+      margin-left: 0px;
+      text-align: center;
+    }
   }
 
   &__slider {
     position: relative;
     margin-top: 60px;
     width: 100%;
-    height: 510px;
+    height: 570px;
     overflow: hidden;
+
+    @include mobile(790px) {
+      height: 580px;
+    }
 
     & input {
       position: absolute;
@@ -38,37 +51,54 @@
     }
 
     &-slides {
-      width: 200%;
+      width: 500%;
       height: 100%;
       display: flex;
 
       &-slide {
-        width: 50%;
+        width: 20%;
         display: flex;
         justify-content: space-between;
         transition: all 0.8s ease;
 
         @include mobile(1370px) {
-          &:nth-child(1) {
-            &:nth-child(4) {
-              display: none;
-            }
-          }
+          justify-content: center;
         }
 
         &-item {
           max-width: 18%;
           height: auto;
+          display: flex;
+          flex-direction: column;
+          gap: 26px;
 
           @include mobile(1370px) {
-            &:nth-child(4) {
+            max-width: 27%;
+
+            &:nth-child(n + 2) {
               display: none;
             }
           }
 
-          display: flex;
-          flex-direction: column;
-          gap: 26px;
+          @include mobile(1200px) {
+            max-width: 31%;
+          }
+
+          @include mobile(990px) {
+            max-width: 37%;
+          }
+
+          @include mobile(790px) {
+            max-width: 47%;
+          }
+
+          @include mobile(540px) {
+            max-width: 69%;
+          }
+
+          @include mobile(440px) {
+            max-width: 79%;
+          }
 
           & img {
             max-width: 370px;
@@ -80,28 +110,35 @@
             flex-direction: column;
             gap: 8px;
 
+            @include mobile(1370px) {
+              align-items: center;
+            }
+
+            @include mobile(790px) {
+              gap: 15px;
+            }
+
             & span {
               font-family: $montserrat;
               @include font(16px, 700, $black-out);
               line-height: 24px;
-            }
 
-            &-title {
-              font-family: $raleway;
-              @include font(16px, 400, $black-out);
-              line-height: 24px;
-            }
+              @include mobile(1370px) {
+                font-size: 18px;
+              }
 
-            &-text {
-              font-family: $raleway;
-              @include font(15px, 400, $black-out);
-              line-height: 24px;
-              opacity: 0.5;
+              @include mobile(790px) {
+                font-size: 23px;
+              }
             }
 
             &-active {
               display: flex;
               gap: 40px;
+
+              @include mobile(790px) {
+                gap: 75px;
+              }
 
               & svg {
                 width: 24px;
@@ -120,6 +157,37 @@
                 align-items: center;
               }
             }
+
+            &-title {
+              font-family: $raleway;
+              @include font(16px, 400, $black-out);
+              line-height: 24px;
+
+              @include mobile(1370px) {
+                text-align: center;
+                font-size: 18px;
+              }
+
+              @include mobile(790px) {
+                font-size: 21px;
+              }
+            }
+
+            &-text {
+              font-family: $raleway;
+              @include font(15px, 400, $black-out);
+              line-height: 24px;
+              opacity: 0.5;
+
+              @include mobile(1370px) {
+                text-align: center;
+                font-size: 16px;
+              }
+
+              @include mobile(790px) {
+                font-size: 18px;
+              }
+            }
           }
         }
       }
@@ -130,7 +198,11 @@
       display: flex;
       justify-content: space-between;
       width: 100%;
-      bottom: 320px;
+      bottom: 380px;
+
+      @include mobile(1370px) {
+        display: none;
+      }
 
       &-prev {
         width: 56px;
@@ -181,12 +253,62 @@
         }
       }
     }
+
+    &-pagination {
+      position: absolute;
+      display: flex;
+      gap: 10px;
+      left: 50%;
+      bottom: 20px;
+      display: none;
+
+      @include mobile(1370px) {
+        display: flex;
+        width: 100%;
+        left: 0;
+        justify-content: center;
+        gap: 30px;
+      }
+
+      @include mobile(790px) {
+        bottom: 0;
+      }
+
+      & label {
+        width: 30px;
+        height: 8px;
+        background-color: $black-out;
+        opacity: 0.5;
+        border-radius: 10px;
+
+        @include mobile(1370px) {
+          width: 40px;
+        }
+      }
+    }
+
     #r1:checked ~ .r1 {
       margin-left: 0;
     }
 
     #r2:checked ~ .r1 {
-      margin-left: -50%;
+      margin-left: -20%;
+    }
+
+    #s1:checked ~ .s1 {
+      margin-left: 0;
+    }
+    #s2:checked ~ .s1 {
+      margin-left: -20%;
+    }
+    #s3:checked ~ .s1 {
+      margin-left: -40%;
+    }
+    #s4:checked ~ .s1 {
+      margin-left: -60%;
+    }
+    #s5:checked ~ .s1 {
+      margin-left: -80%;
     }
   }
 }

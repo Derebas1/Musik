@@ -46,17 +46,59 @@
         width: 50%;
         display: flex;
         justify-content: space-between;
+        transition: all 0.8s ease;
+
+        @include mobile(1370px) {
+          &:nth-child(1) {
+            &:nth-child(4) {
+              display: none;
+            }
+          }
+        }
 
         &-item {
           max-width: 18%;
           height: auto;
 
+          @include mobile(1370px) {
+            &:nth-child(4) {
+              display: none;
+            }
+          }
+
+          display: flex;
+          flex-direction: column;
+          gap: 26px;
+
           & img {
-            max-width: 100%;
-            height: 338px;
+            max-width: 370px;
+            height: 370px;
           }
 
           &-info {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            & span {
+              font-family: $montserrat;
+              @include font(16px, 700, $black-out);
+              line-height: 24px;
+            }
+
+            &-title {
+              font-family: $raleway;
+              @include font(16px, 400, $black-out);
+              line-height: 24px;
+            }
+
+            &-text {
+              font-family: $raleway;
+              @include font(15px, 400, $black-out);
+              line-height: 24px;
+              opacity: 0.5;
+            }
+
             &-active {
               display: flex;
               gap: 40px;
@@ -100,6 +142,10 @@
         align-items: center;
         margin-left: 120px;
 
+        @include mobile(1440px) {
+          margin-left: 80px;
+        }
+
         & img {
           width: 33px;
           height: 33px;
@@ -116,12 +162,23 @@
         align-items: center;
         margin-right: 120px;
 
+        @include mobile(1440px) {
+          margin-right: 80px;
+        }
+
         & img {
           width: 33px;
           height: 33px;
           transform: rotate(180deg);
         }
       }
+    }
+    #r1:checked ~ .r1 {
+      margin-left: 0;
+    }
+
+    #r2:checked ~ .r1 {
+      margin-left: -50%;
     }
   }
 }

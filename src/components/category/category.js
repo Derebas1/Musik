@@ -7,7 +7,7 @@ let swiper = new Swiper(".category__slider", {
       slidesPerView: 1,
       spaceBetween: 30,
     },
-    "@0.20": {
+    "@0.15": {
       slidesPerView: 2,
       spaceBetween: 60,
     },

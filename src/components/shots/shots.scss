@@ -281,6 +281,11 @@
         opacity: 0.5;
         border-radius: 10px;
 
+        &:hover {
+          background-color: $blue-copper-ore;
+          opacity: 1;
+        }
+
         @include mobile(1370px) {
           width: 40px;
         }

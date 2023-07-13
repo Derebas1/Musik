@@ -3,11 +3,11 @@ let swiper = new Swiper(".category__slider", {
   grabCursor: true,
 
   breakpoints: {
-    "@0.00": {
+    "@0.70": {
       slidesPerView: 1,
-      spaceBetween: 30,
+      // spaceBetween: 30,
     },
-    "@0.15": {
+    "@0.95": {
       slidesPerView: 2,
       spaceBetween: 60,
     },

@@ -283,7 +283,7 @@
 
         &:hover {
           background-color: $blue-copper-ore;
-          opacity: 0.9;
+          opacity: 1;
         }
 
         @include mobile(1370px) {

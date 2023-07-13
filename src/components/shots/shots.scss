@@ -100,6 +100,10 @@
             max-width: 79%;
           }
 
+          @include mobile(390px) {
+            max-width: 95%;
+          }
+
           & img {
             max-width: 370px;
             height: 370px;

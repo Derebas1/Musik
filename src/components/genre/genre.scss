@@ -1,5 +1,6 @@
 .genre {
   margin-top: 240px;
+  position: relative;
 
   @include mobile(1200px) {
     margin-top: 180px;
@@ -99,5 +100,14 @@
         }
       }
     }
+  }
+
+  &__confetti {
+    width: 167px;
+    height: 155px;
+    fill: transparent;
+    position: absolute;
+    left: 93px;
+    bottom: -50px;
   }
 }

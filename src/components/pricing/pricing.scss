@@ -20,6 +20,37 @@ $pricing-maps: (1 $black-out, 2 $blue-copper-ore, 3 $red-mana);
 
 .pricing {
   margin-top: 240px;
+  position: relative;
+
+  &__confetti {
+    & svg {
+      fill: transparent;
+    }
+
+    &-one {
+      width: 54px;
+      height: 47px;
+      position: absolute;
+      top: -47px;
+      right: 200px;
+    }
+
+    &-two {
+      width: 40px;
+      height: 23px;
+      position: absolute;
+      top: 75px;
+      left: 151px;
+    }
+
+    &-three {
+      width: 26px;
+      height: 26px;
+      position: absolute;
+      top: 186px;
+      left: 249px;
+    }
+  }
 
   &__content {
     &-title {

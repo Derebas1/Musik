@@ -41,6 +41,11 @@
 
           & a {
             color: $white;
+
+            &:hover {
+              color: $chromis-damsel-blue;
+              opacity: 0.5;
+            }
           }
         }
       }

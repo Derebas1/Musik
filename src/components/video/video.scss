@@ -14,13 +14,25 @@
     }
 
     &-text {
+      font-family: map-get($font-change, "raleway");
       @include font(24px, 400, $black-out);
+
+      @include mobile(645px) {
+        text-align: center;
+        line-height: 35px;
+        font-size: 27px;
+      }
     }
 
     &-video {
-      padding-top: 50px;
+      margin-top: 50px;
       display: flex;
       gap: 50px;
+
+      @include mobile(1200px) {
+        max-width: 100%;
+        position: relative;
+      }
 
       & iframe {
         width: 800px;
@@ -40,6 +52,14 @@
         flex-direction: column;
         justify-content: space-between;
 
+        @include mobile(1200px) {
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          width: 30px;
+          height: 21px;
+        }
+
         &:hover {
           cursor: pointer;
         }
@@ -48,6 +68,10 @@
           height: 2px;
           background-color: $black-out;
           width: 100%;
+
+          @include mobile(1200px) {
+            background-color: $blue-copper-ore;
+          }
 
           &:first-child {
             transform: rotate(41deg);

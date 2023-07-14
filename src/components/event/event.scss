@@ -8,6 +8,10 @@
       fill: transparent;
     }
 
+    @include mobile(1200px) {
+      display: none;
+    }
+
     &-one {
       width: 110px;
       height: 101px;
@@ -22,6 +26,10 @@
       position: absolute;
       top: 60%;
       right: 75px;
+
+      @include mobile(1360px) {
+        top: 55%;
+      }
     }
 
     &-three {

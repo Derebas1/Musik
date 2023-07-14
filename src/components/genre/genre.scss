@@ -109,5 +109,9 @@
     position: absolute;
     left: 93px;
     bottom: -50px;
+
+    @include mobile(990px) {
+      display: none;
+    }
   }
 }

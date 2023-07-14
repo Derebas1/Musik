@@ -27,6 +27,10 @@ $pricing-maps: (1 $black-out, 2 $blue-copper-ore, 3 $red-mana);
       fill: transparent;
     }
 
+    @include mobile(1200px) {
+      display: none;
+    }
+
     &-one {
       width: 54px;
       height: 47px;
@@ -49,6 +53,10 @@ $pricing-maps: (1 $black-out, 2 $blue-copper-ore, 3 $red-mana);
       position: absolute;
       top: 186px;
       left: 249px;
+
+      @include mobile(1500px) {
+        top: 245px;
+      }
     }
   }
 

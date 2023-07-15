@@ -1,5 +1,39 @@
 .sponsors {
   margin-top: 180px;
+  position: relative;
+
+  &__confetti {
+    & svg {
+      fill: transparent;
+    }
+
+    @include mobile(1200px) {
+      display: none;
+    }
+
+    &-one {
+      width: 202px;
+      height: 129px;
+      position: absolute;
+      top: 90px;
+
+      @include mobile(1400px) {
+        top: -30px;
+      }
+    }
+
+    &-two {
+      width: 77px;
+      height: 87px;
+      position: absolute;
+      right: 89px;
+      bottom: 139px;
+
+      @include mobile(1400px) {
+        bottom: 180px;
+      }
+    }
+  }
 
   &__content {
     text-align: center;
